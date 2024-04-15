@@ -57,20 +57,8 @@ List_int::~List_int(){
 
 
 const List_int& List_int::operator = (const List_int& l){
-    // se non faccio un auto assegnamento cancello la lista dell'operando a sx
-    if(this != &l) { // protezione auto-assegnamento
-        while(pimpl->head){
-            Impl_Pcel pc = pimpl->head;
-            impl->head = pimpl->head->next;
-            delete pc;
         }
-        // considero la lista vuota
-        pimpl->head = pimpl->tail = nullptrM
-    }
-    //aggiungo l'elemento per la lista in l
     Impl::Pcell pc = pimpl->head;
-    while(pc != nullptr){
-        append(pc->info);
         pc= pc->next;
     }
 }
